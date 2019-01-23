@@ -5,3 +5,9 @@ services:
     build: ./services/review
     volumes:
       - ./workdir:/workdir
+  lint:
+    build:
+      context: .
+      dockerfile: ./services/textlint
+    volumes:
+      - ./:/work

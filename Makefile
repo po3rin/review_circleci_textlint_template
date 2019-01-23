@@ -1,7 +1,10 @@
-.PHONY: pdf clean ci
+.PHONY: pdf clean lint ci
 
 pdf:
 	docker-compose run --rm review make
+
+lint:
+	docker-compose run --rm lint npx textlint */*.re
 
 clean:
 	docker-compose run --rm review make clean
