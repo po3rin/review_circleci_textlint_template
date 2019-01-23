@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  review:
+    build: ./services/review
+    volumes:
+      - ./workdir:/workdir

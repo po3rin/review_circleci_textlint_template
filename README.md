@@ -7,17 +7,14 @@
 Build Re:VIEW to PDF
 
 ```bash
-$ docker run \
-   --rm \
-   -v (pwd):/work \
-   -v (pwd)/.texmf-var:/root/.texmf-var \
-   vvakame/review:latest /bin/sh -c "cd /work && review-pdfmaker config.yml"
+$ make
 ```
 
 ## Lint text
 
 ```bash
-npx textlint <directory>
+$ npm install
+$ npx textlint */*.re
 ```
 
 ## Test CircleCI
