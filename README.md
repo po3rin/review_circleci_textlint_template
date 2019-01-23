@@ -13,8 +13,7 @@ $ make
 ## Lint text
 
 ```bash
-$ npm install
-$ npx textlint */*.re
+$ make lint
 ```
 
 ## Test CircleCI
