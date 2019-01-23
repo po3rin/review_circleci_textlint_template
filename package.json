@@ -1,0 +1,30 @@
+{
+  "name": "po3rin-shoten6",
+  "version": "1.0.0",
+  "description": "[![CircleCI](https://circleci.com/gh/po3rin/shoten6.svg?style=shield&circle-token=1e338506ba369993e54942e31f1cda6b84dd2a5b)](https://circleci.com/gh/po3rin/shoten6)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "textlint": "^11.2.1",
+    "textlint-plugin-review": "^0.3.3",
+    "textlint-rule-preset-ja-technical-writing": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/po3rin/shoten6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/po3rin/shoten6/issues"
+  },
+  "homepage": "https://github.com/po3rin/shoten6#readme"
+}

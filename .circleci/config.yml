@@ -1,0 +1,45 @@
+version: 2.1
+
+executors:
+  build-e:
+    docker:
+      - image: vvakame/review:latest
+  lint-e:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+
+jobs:
+  build_review:
+    executor:
+      name: build-e
+    steps:
+      - checkout
+      - run:
+          name: Build Re:VIEW to PDF
+          command: |
+            review-pdfmaker config.yml
+      - store_artifacts:
+          path: book.pdf
+          destination: book.pdf
+
+  lint_review:
+    executor:
+      name: lint-e
+    steps:
+      - checkout
+      - run:
+          command: npm install
+      - run:
+          command: |
+            npx textlint po3rin-shoten6.re
+            # sudo chmod +x ./review-textlint.sh
+            # ./review-textlint.sh
+
+workflows:
+  version: 2.1
+  build_upload:
+    jobs:
+      - lint_review
+      - build_review:
+          requires:
+            - lint_review
