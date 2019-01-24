@@ -18,6 +18,9 @@ $ make lint
 
 ## Test CircleCI
 
+For test CircleCI in local, you must install circleci cli.
+https://circleci.com/docs/2.0/local-cli/
+
 ```bash
 $ make ci
 ```
